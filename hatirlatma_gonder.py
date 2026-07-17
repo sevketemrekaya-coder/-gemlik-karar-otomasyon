@@ -33,8 +33,8 @@ SETTINGS_FILE = "settings.json"
 
 SMTP_HOST = os.environ.get("SMTP_HOST", "mail.kurumsaleposta.com")
 SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
-SMTP_USER = os.environ.get("SMTP_USER")
-SMTP_PASS = os.environ.get("SMTP_PASS")
+SMTP_USER = os.environ.get("toplanti@gemlik.bel.tr")
+SMTP_PASS = os.environ.get("_lh7:n60:3_bVNYR")
 
 
 def load_json(path, default):
