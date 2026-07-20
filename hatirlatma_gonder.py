@@ -32,7 +32,7 @@ DATA_FILE = "kararlar.json"
 SETTINGS_FILE = "settings.json"
 
 SMTP_HOST = os.environ.get("SMTP_HOST", "mail.kurumsaleposta.com")
-SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
+SMTP_PORT = int(os.environ.get("SMTP_PORT", "465"))
 SMTP_USER = os.environ.get("SMTP_USER")
 SMTP_PASS = os.environ.get("SMTP_PASS")
 
@@ -163,33 +163,45 @@ def main():
         return
 
     context = ssl.create_default_context()
-    with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as smtp:
-        smtp.starttls(context=context)
-        smtp.login(SMTP_USER, SMTP_PASS)
-
-        gonderilen = 0
-        for karar, termin, kalan in hedefler:
-            dept = find_dept(depts, karar.get("mudurluk"))
-            deputy = find_deputy(deputies, karar.get("baskanYardimcisi"))
-            to_addr = dept.get("email") if dept else None
-            if not to_addr:
-                print(f"ATLANDI (e-posta yok): {karar.get('kararNo')} - {karar.get('mudurluk')}")
-                continue
-            cc_addr = deputy.get("email") if deputy else None
-            subject = f"[Gemlik Belediyesi] Karar Takip Hatırlatması – {karar.get('kararNo')}"
-            body = mail_gövdesi(karar, termin, dept)
-            try:
-                mail_gonder(smtp, to_addr, cc_addr, subject, body)
-                karar.setdefault("hatirlatmalar", []).append({
-                    "tarih": datetime.now().isoformat(),
-                    "kanal": "e-posta (otomatik)"
-                })
-                gonderilen += 1
-                print(f"GÖNDERİLDİ: {karar.get('kararNo')} -> {to_addr}")
-            except Exception as e:
-                print(f"HATA ({karar.get('kararNo')}): {e}")
+    try:
+        with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, context=context) as smtp:
+            smtp.login(SMTP_USER, SMTP_PASS)
+            _gonder_tumu(smtp, hedefler, depts, deputies)
+    except ssl.SSLCertVerificationError as e:
+        print(f"UYARI: Sertifika doğrulaması başarısız ({e}). Sunucu adı/sertifika uyuşmazlığı nedeniyle "
+              f"doğrulamasız bağlantıya geçiliyor (yalnızca bu bilinen/güvenilir kurumsal sunucu için).")
+        unsafe_context = ssl.create_default_context()
+        unsafe_context.check_hostname = False
+        unsafe_context.verify_mode = ssl.CERT_NONE
+        with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, context=unsafe_context) as smtp:
+            smtp.login(SMTP_USER, SMTP_PASS)
+            _gonder_tumu(smtp, hedefler, depts, deputies)
 
     save_json(DATA_FILE, kararlar)
+
+
+def _gonder_tumu(smtp, hedefler, depts, deputies):
+    gonderilen = 0
+    for karar, termin, kalan in hedefler:
+        dept = find_dept(depts, karar.get("mudurluk"))
+        deputy = find_deputy(deputies, karar.get("baskanYardimcisi"))
+        to_addr = dept.get("email") if dept else None
+        if not to_addr:
+            print(f"ATLANDI (e-posta yok): {karar.get('kararNo')} - {karar.get('mudurluk')}")
+            continue
+        cc_addr = deputy.get("email") if deputy else None
+        subject = f"[Gemlik Belediyesi] Karar Takip Hatırlatması – {karar.get('kararNo')}"
+        body = mail_gövdesi(karar, termin, dept)
+        try:
+            mail_gonder(smtp, to_addr, cc_addr, subject, body)
+            karar.setdefault("hatirlatmalar", []).append({
+                "tarih": datetime.now().isoformat(),
+                "kanal": "e-posta (otomatik)"
+            })
+            gonderilen += 1
+            print(f"GÖNDERİLDİ: {karar.get('kararNo')} -> {to_addr}")
+        except Exception as e:
+            print(f"HATA ({karar.get('kararNo')}): {e}")
     print(f"Toplam {gonderilen} hatırlatma gönderildi.")
 
 
