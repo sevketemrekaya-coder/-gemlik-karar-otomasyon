@@ -2,11 +2,12 @@ name: Karar Takip - Günlük Hatırlatma Maili
 
 on:
   schedule:
+    # Her gün TSİ 08:00'de çalışır (UTC 05:00). GitHub Actions cron'u UTC kullanır.
     - cron: '0 5 * * *'
-  workflow_dispatch: {}
+  workflow_dispatch: {}   # İstersen "Actions" sekmesinden elle de tetikleyebilirsin
 
 permissions:
-  contents: write
+  contents: write   # gönderim sonrası kararlar.json'daki hatırlatma kaydını commit edebilmek için
 
 jobs:
   hatirlatma:
@@ -23,7 +24,15 @@ jobs:
       - name: Hatırlatma scriptini çalıştır
         env:
           SMTP_HOST: mail.kurumsaleposta.com
-          SMTP_PORT: 587
+          SMTP_PORT: 465
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
         run: python hatirlatma_gonder.py
+
+      - name: Güncellenen kararlar.json dosyasını kaydet (commit)
+        run: |
+          git config --global user.name "karar-takip-bot"
+          git config --global user.email "bot@gemlik.bel.tr"
+          git add kararlar.json
+          git diff --cached --quiet || git commit -m "Otomatik hatırlatma günlüğü güncellendi"
+          git push
