@@ -1,0 +1,216 @@
+{
+ "depts": [
+  {
+   "ad": "Özel Kalem Müdürlüğü",
+   "gorev": "Başkanlık protokol ve özel kalem işleri.",
+   "mudur": "Bahadır SELVİ",
+   "email": "bahadirselvi@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Rehberlik ve Teftiş Kurulu Müdürlüğü",
+   "gorev": "Denetim, inceleme, araştırma, rehberlik ve disiplin süreçleri.",
+   "mudur": "Şevket Emre KAYA",
+   "email": "sevketemrekaya@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Mali Hizmetler Müdürlüğü",
+   "gorev": "Bütçe, muhasebe, gelir tahakkuk-tahsilat işlemleri.",
+   "mudur": "İsmail ÖZTÜRK",
+   "email": "ismailozturk@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Fen İşleri Müdürlüğü",
+   "gorev": "Yol, kaldırım, tretuar yapım-bakım-onarımı, boya/işaretleme, altyapı ve inşaat işleri, iş makinesi bakımı.",
+   "mudur": "Hasan Tahsin AYDIN",
+   "email": "hasantahsin@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Park ve Bahçeler Müdürlüğü",
+   "gorev": "Yeşil alan, park, çocuk oyun alanı, ağaçlandırma, peyzaj düzenlemeleri.",
+   "mudur": "Alihan KUZU",
+   "email": "alihankuzu@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "İmar ve Şehircilik Müdürlüğü",
+   "gorev": "İmar planları, yapı ruhsatı, yapı denetim, imar durumu belgesi, kaçak yapı tespiti.",
+   "mudur": "Ahmed Bahadır BAYRAK",
+   "email": "a.bahadirbayrak@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Afet İşleri ve Risk Yönetimi Müdürlüğü",
+   "gorev": "Doğal afet ve acil durum planlaması, risk azaltma çalışmaları, afet koordinasyonu.",
+   "mudur": "Cenk YUVARLAKKAYA",
+   "email": "cenkyuvarlakkaya@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Emlak ve İstimlak Müdürlüğü",
+   "gorev": "Taşınmaz yönetimi, kamulaştırma, kiralama işlemleri.",
+   "mudur": "Pınar TAŞ ATEŞLİ",
+   "email": "pinaratesli@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Hukuk İşleri Müdürlüğü",
+   "gorev": "Dava takibi, hukuki görüş ve mütalaa.",
+   "mudur": "Elif DİL SEVİM",
+   "email": "elifdilsevim@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Temizlik İşleri Müdürlüğü",
+   "gorev": "Çöp toplama, cadde-sokak temizliği, katı atık yönetimi.",
+   "mudur": "Kadir ÖZKAN",
+   "email": "kadirozkan@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Zabıta Müdürlüğü",
+   "gorev": "Kaçak/ruhsatsız faaliyet denetimi, işgaliye takibi, pazar yeri denetimi, kamu düzeni.",
+   "mudur": "Ferhat GEYİK",
+   "email": "ferhatgeyik@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Ruhsat ve Denetim Müdürlüğü",
+   "gorev": "İşyeri açma ve çalışma ruhsatları, denetimi.",
+   "mudur": "Ömer USLU",
+   "email": "omeruslu@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Sağlık İşleri Müdürlüğü",
+   "gorev": "Halk sağlığı hizmetleri, sağlık taramaları koordinasyonu, hasta/yaşlı destek hizmetleri.",
+   "mudur": "Derya UĞURTAN ÖNCÜ",
+   "email": "deryaoncu@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Veteriner İşleri Müdürlüğü",
+   "gorev": "Sokak hayvanları, hayvan sağlığı ve kontrolü.",
+   "mudur": "Sabri EMRE",
+   "email": "sabriemre@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Yazı İşleri Müdürlüğü",
+   "gorev": "Meclis ve encümen yazışmaları, evrak/arşiv işlemleri.",
+   "mudur": "Emine Aksel TÜMER",
+   "email": "emineakseltumer@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Destek Hizmetleri Müdürlüğü",
+   "gorev": "Genel hizmet alımları, araç filosu, temizlik/güvenlik hizmet desteği.",
+   "mudur": "Hakan DERE",
+   "email": "hakandere@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Kültür Sanat ve Sosyal İşler Müdürlüğü",
+   "gorev": "Kültürel ve sanatsal etkinlikler, sosyal projeler, toplumsal etkinlik organizasyonu.",
+   "mudur": "Engin YILDIZ",
+   "email": "enginyildiz@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Çevre Koruma ve Kontrol Müdürlüğü",
+   "gorev": "Çevre kirliliği, gürültü, hava kalitesi, atık yönetimi denetimi.",
+   "mudur": "Yaşar DEMİRDİREK",
+   "email": "yasardemirdirek@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "İnsan Kaynakları ve Eğitim Müdürlüğü",
+   "gorev": "Personel özlük işlemleri, atama, hizmet içi eğitim.",
+   "mudur": "Nazan EROL",
+   "email": "nazanerol@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "İklim Değişikliği ve Sıfır Atık Müdürlüğü",
+   "gorev": "İklim eylem planı, sıfır atık uygulamaları, çevresel sürdürülebilirlik projeleri.",
+   "mudur": "Ahmet DEDETÜRK",
+   "email": "ahmetdedeturk@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Gelirler Müdürlüğü",
+   "gorev": "Belediye gelirlerinin tahakkuk ve tahsilat işlemleri, vergi/harç takibi.",
+   "mudur": "Zafer GÜNDOĞDU",
+   "email": "zafergundogdu@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Muhtarlıklar ve Halkla İlişkiler Müdürlüğü",
+   "gorev": "Muhtarlıklarla koordinasyon, vatandaş başvuruları, halkla ilişkiler.",
+   "mudur": "Özcan SOYGAN",
+   "email": "ozcansoygan@gemlik.bel.tr",
+   "tel": ""
+  }
+ ],
+ "deputies": [
+  {
+   "ad": "Şükrü Deviren (Belediye Başkanı)",
+   "alanlar": [
+    "Özel Kalem Müdürlüğü",
+    "Rehberlik ve Teftiş Kurulu Müdürlüğü",
+    "Mali Hizmetler Müdürlüğü"
+   ],
+   "email": "sukrudeviren@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Yahya Emrecan Uzunkaya",
+   "alanlar": [
+    "Fen İşleri Müdürlüğü",
+    "Park ve Bahçeler Müdürlüğü",
+    "İmar ve Şehircilik Müdürlüğü",
+    "Afet İşleri ve Risk Yönetimi Müdürlüğü",
+    "Emlak ve İstimlak Müdürlüğü"
+   ],
+   "email": "emrecanuzunkaya@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Durmuş Uslu",
+   "alanlar": [
+    "Hukuk İşleri Müdürlüğü",
+    "Temizlik İşleri Müdürlüğü",
+    "Zabıta Müdürlüğü",
+    "Ruhsat ve Denetim Müdürlüğü",
+    "Sağlık İşleri Müdürlüğü",
+    "Veteriner İşleri Müdürlüğü",
+    "Yazı İşleri Müdürlüğü",
+    "Destek Hizmetleri Müdürlüğü"
+   ],
+   "email": "durmususlu@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Zülküf Zor",
+   "alanlar": [
+    "Kültür Sanat ve Sosyal İşler Müdürlüğü",
+    "Çevre Koruma ve Kontrol Müdürlüğü",
+    "İnsan Kaynakları ve Eğitim Müdürlüğü",
+    "İklim Değişikliği ve Sıfır Atık Müdürlüğü",
+    "Gelirler Müdürlüğü",
+    "Muhtarlıklar ve Halkla İlişkiler Müdürlüğü"
+   ],
+   "email": "zulkufzor@gemlik.bel.tr",
+   "tel": ""
+  },
+  {
+   "ad": "Tüm Başkan Yardımcıları",
+   "alanlar": [],
+   "email": "",
+   "tel": ""
+  }
+ ]
+}
